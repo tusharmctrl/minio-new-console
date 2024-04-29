@@ -8,8 +8,6 @@ ENV MINIO_ROOT_PASSWORD=CHANGEME123
 # Expose ports for MinIO server and console
 EXPOSE 9000 9001
 
-# Mount the data volume
-VOLUME /data
-
+# Mount the data volum
 # Start MinIO server with console address
 CMD ["server", "/data", "--console-address", ":9001"]
